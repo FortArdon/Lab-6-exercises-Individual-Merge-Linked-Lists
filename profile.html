@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='back.jpg') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-position: center center;
+            background-size: 200% 200%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .profile-picture {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #333;
+        }
+        .home-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Profile</h1>
+        <img class="profile-picture" src="{{ url_for('static', filename='Fort.jpg') }}">
+        <div class="profile-info">
+            <p>Name: Fort Fredrick C. Ardon</p>
+            <p>Age: 20</p>
+            <p>Address: 24-A Lourdes St. Brgy. San Vicente Diliman, Quezon City</p>
+            <p>School: Polytechnic University of the Philippines</p>
+            <p>Hobbies: Basketball, Billiards, Reading, Watching Movies </p>
+            <p>Motto: It's better to die than to live without passion</p>
+        </div>
+    </div>
+    <a href="/" class="home-button">Home</a>
+</body>
+
+</html>
